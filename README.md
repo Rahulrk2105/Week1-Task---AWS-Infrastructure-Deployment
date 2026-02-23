@@ -27,8 +27,7 @@ The objective was to design, secure, deploy, and validate a cloud infrastructure
 
 ![IAM Role](03_IAM_Role.png)
 
-![Access Key](04_Access_Key.png)
-
+![Access Key](04_Access_key.png)
 ---
 
 # 🪣 2️⃣ S3 Bucket Setup
