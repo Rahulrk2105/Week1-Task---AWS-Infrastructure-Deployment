@@ -21,13 +21,13 @@ The objective was to design, secure, deploy, and validate a cloud infrastructure
 
 ### 📸 Screenshots
 
-![IAM User](screenshots/01_IAM_User.png)
+![IAM User](01_IAM_User.png)
 
-![IAM Policy](screenshots/02_IAM_Policy.png)
+![IAM Policy](02_IAM_Policy.png)
 
-![IAM Role](screenshots/03_IAM_Role.png)
+![IAM Role](03_IAM_Role.png)
 
-![Access Key](screenshots/04_Access_Key.png)
+![Access Key](04_Access_Key.png)
 
 ---
 
@@ -46,9 +46,9 @@ aws s3 ls s3://rahul-week1-bucket
 
 ### 📸 Screenshots
 
-![S3 Bucket](screenshots/05_S3_Bucket.png)
+![S3 Bucket](05_S3_Bucket.png)
 
-![AWS CLI](screenshots/06_AWS_CLI_Config.png)
+![AWS CLI](06_AWS_CLI_Config.png)
 
 ---
 
@@ -63,7 +63,7 @@ aws s3 ls s3://rahul-week1-bucket
 
 ### 📸 Screenshot
 
-![EC2 Launch](screenshots/07_EC2_Launch.png)
+![EC2 Launch](07_EC2_Launch.png)
 
 ---
 
@@ -81,7 +81,7 @@ lsblk -f
 
 ### 📸 Screenshot
 
-![EBS Resize](screenshots/08_EBS_Resize.png)
+![EBS Resize](08_EBS_Resize.png)
 
 ---
 
@@ -94,9 +94,9 @@ lsblk -f
 
 ### 📸 Screenshots
 
-![Network Interface Creation](screenshots/09_Network_Interface_Creation.png)
+![Network Interface Creation](09_Network_Interface_Creation.png)
 
-![ENI Attached](screenshots/10_ENI_Attached_To_EC2.png)
+![ENI Attached](10_ENI_Attached_To_EC2.png)
 
 ---
 
@@ -119,11 +119,11 @@ echo "Hello from Week1 Project" | sudo tee /var/www/html/index.html
 
 ### 📸 Screenshots
 
-![Apache Installation](screenshots/11_Apache_Installation.png)
+![Apache Installation](11_Apache_Installation.png)
 
-![HTTP Service Configuration](screenshots/12_HTTP_Service_Config.png)
+![HTTP Service Configuration](12_HTTP_Service_Config.png)
 
-![Website Output](screenshots/13_Website_Output.png)
+![Website Output](13_Website_Output.png)
 
 ---
 
@@ -136,9 +136,9 @@ echo "Hello from Week1 Project" | sudo tee /var/www/html/index.html
 
 ### 📸 Screenshots
 
-![AMI Creation](screenshots/14_AMI_Creation.png)
+![AMI Creation](14_AMI_Creation.png)
 
-![Replica Instances](screenshots/15_Replica_Instances.png)
+![Replica Instances](15_Replica_Instances.png)
 
 ---
 
@@ -178,6 +178,4 @@ All access keys and sensitive credentials have been rotated or removed before pu
 # 📌 Conclusion
 
 This project demonstrates practical, hands-on AWS infrastructure deployment skills and foundational cloud engineering capabilities.
-
----
 
