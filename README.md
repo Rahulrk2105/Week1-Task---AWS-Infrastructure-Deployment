@@ -1,189 +1,183 @@
-# Week1-Task---AWS-Infrastructure-Deployment
+# 🚀 AWS Week 1 Infrastructure Deployment Project
 
 ---
 
-# 📌 Project Overview
+## 📖 Project Overview
 
-This project demonstrates the deployment and configuration of a complete AWS cloud infrastructure environment using core AWS services.
+This project demonstrates the deployment and configuration of AWS core infrastructure services including IAM, S3, EC2, EBS, Networking (ENI), and AMI-based replication.
 
-The objective was to:
-
-- Create and manage IAM users and policies
-- Configure secure S3 bucket access
-- Deploy and configure an EC2 web server
-- Resize EBS storage
-- Attach a custom Elastic Network Interface (ENI)
-- Create an AMI and launch replica instances
-
-This project simulates real-world cloud infrastructure deployment and management.
+The objective was to design, secure, deploy, and validate a cloud infrastructure environment similar to real-world production setups.
 
 ---
 
-# 🏗 AWS Services Used
-
-- AWS IAM
-- Amazon S3
-- AWS CLI
-- Amazon EC2
-- Amazon EBS (gp3)
-- Elastic Network Interface (ENI)
-- Apache HTTP Server
-- Amazon Machine Image (AMI)
-
----
-
-# 🔐 Step 1: IAM Configuration
+# 🔐 1️⃣ IAM Configuration
 
 ### ✔ Tasks Performed
-- Created IAM user
-- Generated access key & secret key
-- Configured AWS CLI
+- Created IAM User
+- Generated Access Key
 - Created custom S3 ReadOnly policy
-- Created IAM role for EC2
-- Created user group with ReadOnlyAccess policy
+- Created IAM Role for EC2
+- Created IAM group with ReadOnlyAccess
 
-### 📷 Screenshots
+### 📸 Screenshots
 
-![IAM User](screenshots/01_IAM_User.png)  
-![IAM Policy](screenshots/02_IAM_Policy.png)  
-![IAM Role](screenshots/03_IAM_Role.png)  
+![IAM User](screenshots/01_IAM_User.png)
+
+![IAM Policy](screenshots/02_IAM_Policy.png)
+
+![IAM Role](screenshots/03_IAM_Role.png)
+
 ![Access Key](screenshots/04_Access_Key.png)
 
 ---
 
-# 🪣 Step 2: S3 Bucket Configuration
+# 🪣 2️⃣ S3 Bucket Setup
 
 ### ✔ Tasks Performed
 - Created S3 bucket: `rahul-week1-bucket`
 - Attached custom read-only policy
-- Verified access using AWS CLI
+- Verified using AWS CLI
 
 ### 📌 Command Used
 
 ```bash
 aws s3 ls s3://rahul-week1-bucket
-📷 Screenshots
+```
 
+### 📸 Screenshots
 
+![S3 Bucket](screenshots/05_S3_Bucket.png)
 
+![AWS CLI](screenshots/06_AWS_CLI_Config.png)
 
-🖥 Step 3: EC2 Instance Deployment
-✔ Configuration
+---
 
-Amazon Linux 2023
+# 🖥 3️⃣ EC2 Instance Deployment
 
-Instance Type: t2.micro (initial)
+### ✔ Configuration
+- Amazon Linux 2023
+- t2.micro (initial)
+- Upgraded to t2.medium
+- Security Group configured (22 & 80)
+- IAM Role attached
 
-Upgraded to: t2.medium
+### 📸 Screenshot
 
-Security Group configured (Ports 22 & 80)
+![EC2 Launch](screenshots/07_EC2_Launch.png)
 
-IAM Role attached
+---
 
-📷 Screenshot
+# 💾 4️⃣ EBS Volume Resize
 
-💾 Step 4: EBS Volume Resize
-✔ Tasks Performed
+### ✔ Tasks Performed
+- Increased root volume from 30GB → 50GB
+- Verified XFS filesystem
 
-Increased root volume from 30GB → 50GB
+### 📌 Command Used
 
-Verified filesystem (XFS)
-
-📌 Command Used
+```bash
 lsblk -f
-📷 Screenshot
+```
 
-🌐 Step 5: Elastic Network Interface (ENI)
-✔ Tasks Performed
+### 📸 Screenshot
 
-Created custom ENI
+![EBS Resize](screenshots/08_EBS_Resize.png)
 
-Attached ENI to EC2 instance
+---
 
-Verified successful attachment
+# 🌐 5️⃣ Elastic Network Interface (ENI)
 
-📷 Screenshots
+### ✔ Tasks Performed
+- Created custom ENI
+- Attached ENI to EC2
+- Verified successful attachment
 
+### 📸 Screenshots
 
+![Network Interface Creation](screenshots/09_Network_Interface_Creation.png)
 
+![ENI Attached](screenshots/10_ENI_Attached_To_EC2.png)
 
-🌍 Step 6: Apache Web Server Setup
-✔ Tasks Performed
+---
 
-Installed Apache (httpd)
+# 🌍 6️⃣ Apache Web Server Setup
 
-Started and enabled service
+### ✔ Tasks Performed
+- Installed Apache (httpd)
+- Started & enabled service
+- Created custom webpage
+- Verified using Public IP
 
-Created custom web page
+### 📌 Commands Used
 
-Verified via browser using Public IP
-
-📌 Commands Used
+```bash
 sudo yum install httpd -y
 sudo systemctl start httpd
 sudo systemctl enable httpd
 echo "Hello from Week1 Project" | sudo tee /var/www/html/index.html
-📷 Screenshots
+```
 
+### 📸 Screenshots
 
+![Apache Installation](screenshots/11_Apache_Installation.png)
 
+![HTTP Service Configuration](screenshots/12_HTTP_Service_Config.png)
 
+![Website Output](screenshots/13_Website_Output.png)
 
+---
 
-📦 Step 7: AMI Creation & EC2 Replication
-✔ Tasks Performed
+# 📦 7️⃣ AMI Creation & EC2 Replication
 
-Created AMI from configured EC2 instance
+### ✔ Tasks Performed
+- Created AMI from configured instance
+- Launched 2 replica EC2 instances
+- Verified instances running successfully
 
-Launched 2 replica instances from AMI
+### 📸 Screenshots
 
-Verified instances running successfully
+![AMI Creation](screenshots/14_AMI_Creation.png)
 
-📷 Screenshots
+![Replica Instances](screenshots/15_Replica_Instances.png)
 
+---
 
-
-
-🎯 Final Outcome
+# 🎯 Final Outcome
 
 Successfully deployed and validated a complete AWS infrastructure environment including:
 
-Secure IAM setup
+- Secure IAM setup
+- Controlled S3 access
+- EC2 web server deployment
+- EBS storage expansion
+- Custom networking configuration
+- AMI-based instance replication
 
-Controlled S3 access
+---
 
-EC2 web server deployment
+# 🧠 Skills Demonstrated
 
-EBS storage management
+- AWS IAM Security Best Practices
+- S3 Policy Configuration
+- AWS CLI Usage
+- EC2 Provisioning
+- Linux Server Administration
+- Apache Deployment
+- EBS Volume Management
+- ENI Networking
+- AMI & Instance Replication
 
-Custom networking configuration
+---
 
-AMI-based scaling concept
+# ⚠️ Security Notice
 
-🧠 Skills Demonstrated
+All access keys and sensitive credentials have been rotated or removed before publishing this repository.
 
-AWS Identity & Access Management (IAM)
+---
 
-S3 bucket policy configuration
+# 📌 Conclusion
 
-AWS CLI configuration & usage
+This project demonstrates practical, hands-on AWS infrastructure deployment skills and foundational cloud engineering capabilities.
 
-EC2 provisioning & management
+---
 
-Linux system administration
-
-Apache web server deployment
-
-EBS volume expansion
-
-Networking using ENI
-
-AMI creation & replication
-
-⚠️ Security Notice
-
-All access keys and sensitive credentials have been rotated or removed prior to publishing this repository.
-
-📌 Conclusion
-
-This project provides hands-on experience in AWS cloud infrastructure management and demonstrates practical knowledge in deploying and managing cloud resources securely and efficiently.
