@@ -137,7 +137,7 @@ echo "Hello from Week1 Project" | sudo tee /var/www/html/index.html
 
 ![AMI Creation](14_AMI_Creation.png)
 
-![Replica Instances](15_Replica_Instances.png)
+![Replica Instances](15_Replica_Instance.png)
 
 ---
 
